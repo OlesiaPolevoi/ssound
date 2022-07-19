@@ -1,6 +1,6 @@
 const clientId = process.env.REACT_APP_API_KEY;
 
-const redirectUri = "http://localhost:3000";
+const redirectUri = "http://olesia-ssound.surge.sh";
 let acessToken;
 
 const Spotify = {
