@@ -1,5 +1,5 @@
-const clientId = "3930f1a84fa24ae3a2644320c697f0e5";
-// process.env.REACT_APP_API_KEY
+const clientId = process.env.REACT_APP_API_KEY;
+
 const redirectUri = "http://localhost:3000";
 let acessToken;
 
@@ -23,7 +23,7 @@ const Spotify = {
       window.history.pushState("Access Token", null, "/");
       return acessToken;
     } else {
-      const acessUrl = ` https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;
+      const acessUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;
       window.location = acessUrl;
     }
   },
